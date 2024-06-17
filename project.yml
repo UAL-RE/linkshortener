@@ -1,0 +1,33 @@
+parameters: {}
+environment: {}
+packages:
+    - name: app
+      shared: false
+      environment:
+        WASABI_BUCKET: "${WASABI_BUCKET}"
+        WASABI_KEY: "${WASABI_ACCESSKEY}"
+        WASABI_SECRETKEY: "${WASABI_SECRETKEY}"
+      parameters: {}
+      annotations: {}
+      functions:
+        - name: create
+          binary: false
+          main: ""
+          runtime: python:default
+          web: true
+          webSecure: false
+          parameters: {}
+          environment: {}
+          annotations: {}
+          limits: {}
+      functions:
+        - name: r
+          binary: false
+          main: ""
+          runtime: python:default
+          web: true
+          webSecure: false
+          parameters: {}
+          environment: {}
+          annotations: {}
+          limits: {}          
