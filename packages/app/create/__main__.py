@@ -73,7 +73,7 @@ def main(event, context):
             try:
                   s3.put_object(
                         Body = json.dumps(data),
-                        Bucket = 'urlshortener-db',
+                        Bucket = s3bucket,
                         Key = shortcode
                   )
                   shortenedurl = func_base + "/app/r" + "?c=" + shortcode  
